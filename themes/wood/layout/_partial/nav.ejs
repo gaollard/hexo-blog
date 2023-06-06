@@ -1,0 +1,8 @@
+<nav class="topNav">
+    <!-- theme.nav是写在主题下的_config.yml中的nav属性 -->
+    <% theme.nav.forEach(r => { %>
+        <a href=<%=Object.values(r)%>  class=<%=Object.values(r)=="/"+page.path? "chooseNav": "" %>>
+            <%= Object.keys(r) %>
+        </a>
+    <% }) %>
+</nav>

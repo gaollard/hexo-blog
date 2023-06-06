@@ -1,0 +1,14 @@
+# nav
+nav:
+- HOME: /
+- ABOUT: /about
+- GITHUB: https://github.com/QZEming
+
+# info
+title: 伸手居士
+avatar: http://s3.airtlab.com/a1.jpeg
+favicon: /img/assets/favicon.ico
+
+keywords:
+  - hello
+  - world
