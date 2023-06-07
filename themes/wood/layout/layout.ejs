@@ -1,3 +1,13 @@
-<!-- layout/layout.ejs -->
-<%- body %>
-<!-- layout/layout.ejs -->
+<!DOCTYPE html>
+<html lang="en" data-render="index">
+  <%- partial('_partial/head') %>
+  <body>
+    <div class="root">
+      <%- partial('_partial/header') %>
+      <%- partial('_partial/aside') %>
+      <div class="g-content">
+        <%- body %>
+      </div>
+    </div>
+  </body>
+</html>

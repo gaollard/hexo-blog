@@ -1,5 +1,24 @@
-<!-- layout/tag.ejs -->
-<%- partial('tags', {
-    title: page.tag
-}) %>
-<!-- layout/tag.ejs -->
+<div class="g-sub-title">
+  <%= page.tag %>
+</div>
+
+<div class="tag-main">
+  <% if(is_tag()) { %>
+    <div class="tag-detail">
+      <%- partial('_partial/post/post-list', {
+        posts: page.posts
+      }) %>
+    </div>
+  <% } else { site.tags.each(function(tag){ if(tag.length){ %>
+    <div class="tag-list">
+      <h3 class="archive-separator" id="tag-<%=tag.name %>">
+        <%=tag.name %>
+      </h3>
+      <div class="waterfall">
+        <% tag.posts.each(function(post){ %>
+          <%= post.title %>
+        <% }) %>
+      </div>
+    </div>
+  <% } }) } %>
+</div>

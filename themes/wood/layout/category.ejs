@@ -1,3 +1,7 @@
-<!-- layout/category.ejs -->
-<%= page.category %>
-<!-- layout/category.ejs -->
+<div class="g-sub-title">
+  <%= page.category %>
+</div>
+
+<%- partial('_partial/post/post-list', {
+    posts: page.posts
+  }) %>

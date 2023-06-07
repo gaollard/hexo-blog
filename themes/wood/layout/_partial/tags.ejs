@@ -1,10 +1,8 @@
 <div class="tags asideContainer">
-    <div class="asideTitle">标签</div>
-    <div class="asideContent">
-        <% if (site.tags && site.tags.length){ %>
-            <%- list_tags(site.tags, {
-              class: 'article-tag',
-            }) %>
-        <% } %>
-    </div>
+  <div class="asideTitle">标签</div>
+  <div class="asideContent">
+    <% if (site.tags && site.tags.length){ %>
+      <%- list_tags(site.tags, { class: 'article-tag' , }) %>
+    <% } %>
+  </div>
 </div>

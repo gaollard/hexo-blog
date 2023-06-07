@@ -1,0 +1,12 @@
+<div class="post-list">
+  <% posts.forEach(function(post) { %>
+    <div class="post-list-item">
+      <div class="post-item-date">
+        <%= post.date.format(config.date_format) %>
+      </div>
+      <a class="post-item-link" href="<%- url_for(post.path) %>">
+        <%= post.title %>
+      </a>
+    </div>
+  <% }) %>
+</div>
