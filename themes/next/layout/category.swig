@@ -10,8 +10,8 @@
   {### CATEGORY BLOCK ###}
   {######################}
   <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
+    <h1>category</h1>
+    <div id="posts" class="posts-collapse aaa">
       <div class="collection-title">
         <{% if theme.seo %}h2{% else %}h1{% endif %}>{#
         #}{{ page.category }}{#

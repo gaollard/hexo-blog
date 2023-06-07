@@ -1,4 +1,15 @@
-here is page
-<a href=<%=page.path %>>
+<!-- layout/page.ejs -->
+<a href="<%=page.path %>" >
+    <%= page.type %>
     <%= page.title %>
 </a>
+
+<% if(page.type === 'categories') { %>
+    <%- partial('categories') %>
+<% } %>
+<% if(page.type === 'tags') { %>
+    <%- partial('tags', { title: 'all tags'}) %>
+<% } else { %>
+    <%= page.content %>
+<% } %>
+<!-- layout/page.ejs -->

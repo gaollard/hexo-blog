@@ -1,9 +1,21 @@
-<!-- 文章详情 -->
-
-<h1 class="article-title">
-  <%= page.title %>
-</h1>
-
-<div>
-  <%- page.content %>
-</div>
+<!-- layout/post.ejs -->
+<!DOCTYPE html>
+<html>
+  <%- partial('_partial/head') %>
+  <body>
+    <%- partial('_partial/header') %>
+      <div class="main-container">
+        <%- partial('_partial/aside') %>
+          <div class="article">
+            <h1 class="article-title">
+              <%= page.title %>
+            </h1>
+            <div>
+              <%- page.content %>
+            </div>
+          </div>
+      </div>
+    <%- partial('_partial/footer') %>
+  </body>
+</html>
+<!-- layout/post.ejs -->
