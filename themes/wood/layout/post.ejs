@@ -1,8 +1,41 @@
-<div class="article">
-  <h1 class="article-title">
-    <%= page.title %>
-  </h1>
-  <div>
-    <%- page.content %>
+<!-- layout/post.ejs -->
+<%
+  var relate_posts = [];
+  for(const post of (site.posts.toArray() || [])) {
+    if ((post.tags || []).some(function(tag) {
+      return page.tags.toArray().some(function(page_tag) {
+        return page_tag.name === tag.name
+      })
+    })) {
+      relate_posts.push(post)
+    }
+  }
+%>
+
+<div class="post-container">
+  <div class="article-left ">
+    <div class="relate-posts">
+      <div class="post-list">
+        <% relate_posts.forEach(function(post) { %>
+          <div class="post-list-item">
+            <a class="post-item-link" href="<%- url_for(post.path) %>">
+              <%= post.title %>
+            </a>
+          </div>
+        <% }) %>
+      </div>
+    </div>
   </div>
+  
+  <div class="article">
+    <h1 class="article-title">
+      <%= page.title %>
+    </h1>
+    <div>
+      <%- page.content %>
+    </div>
+  </div>
+
+  <div class="article-right"></div>
 </div>
+<!-- layout/post.ejs -->

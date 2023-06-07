@@ -1,10 +1,15 @@
-<div class="page">
+<!-- layout/page.ejs -->
+<div class="page" data-page-type="<%= page.type %>">
   <% if(page.type === 'categories') { %>
     <%- partial('categories') %>
   <% } %>
   <% if(page.type === 'tags') { %>
-    <%- partial('tags', { title: 'all tags'}) %>
-  <% } else { %>
+    <%- partial('tags', { title: 'TAGS'}) %>
+  <% } %>
+  <% if(page.type === 'archive') { %>
+    <%- partial('archive', { title: 'archive'}) %>
+  <% }  else { %>
     <%- page.content %>
   <% } %>
 </div>
+<!-- layout/page.ejs -->

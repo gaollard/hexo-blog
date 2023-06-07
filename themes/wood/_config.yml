@@ -2,6 +2,9 @@
 nav:
 - HOME: /
 - ABOUT: /about
+- TAG: /tags
+- CATEGORY: /categories
+- ARCHIVE: /archives
 - GITHUB: https://github.com/QZEming
 
 # info

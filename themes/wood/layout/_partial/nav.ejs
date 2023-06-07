@@ -1,6 +1,6 @@
 <nav class="g-nav">
   <% theme.nav.forEach(r => { %>
-    <a class="g-nav-link" href=<%= Object.values(r) %> class=<%=Object.values(r) == "/" + page.path ? "nav-active": "" %>>
+    <a class="g-nav-link" href=<%= Object.values(r) %> class=<%= is_current(path.path) ? "nav-active": "" %>>
       <%= Object.keys(r) %>
       <!-- <%= page.path %> -->
     </a>
