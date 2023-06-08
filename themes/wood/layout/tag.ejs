@@ -4,9 +4,20 @@
 
 <div class="tag-main">
   <% if(is_tag()) { %>
+    <%
+      var relate_posts = [];
+      for(const post of (site.posts.toArray() || [])) {
+        var tags = post.tags || [];
+        if (tags.some(function(tag){
+          return tag.name === page.tag
+        })) {
+          relate_posts.push(post)
+        }
+      }
+    %>
     <div class="tag-detail">
       <%- partial('_partial/post/post-list', {
-        posts: page.posts
+        posts: relate_posts
       }) %>
     </div>
   <% } else { site.tags.each(function(tag){ if(tag.length){ %>

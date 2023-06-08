@@ -1,8 +1,8 @@
+<%
+  var formatPath = ('/' + page.path).replace("\/index.html", '') || '/';
+%>
 <nav class="g-nav">
   <% theme.nav.forEach(r => { %>
-    <a class="g-nav-link" href=<%= Object.values(r) %> class=<%= is_current(path.path) ? "nav-active": "" %>>
-      <%= Object.keys(r) %>
-      <!-- <%= page.path %> -->
-    </a>
+    <a href=<%= Object.values(r) %> class='<%= (formatPath === Object.values(r)[0]) ? "nav-like-active g-nav-link": "g-nav-link" %>'><%= Object.keys(r)[0] %></a>
   <% }) %>
 </nav>
