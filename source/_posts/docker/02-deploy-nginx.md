@@ -1,5 +1,9 @@
+---
+tags: Docker
+---
+
 ```bash
-// 第一步：获取 nginx 镜像
+# 第一步：获取 nginx 镜像
 docker pull nginx
 ```
 

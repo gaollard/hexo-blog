@@ -1,3 +1,7 @@
+---
+tags: Docker
+---
+
 参考文档：[https://blog.csdn.net/ncdx111/article/details/79878098](https://blog.csdn.net/ncdx111/article/details/79878098)
 
 > 通过镜像名称导出时，导入镜像时，镜像名称不会丢失，通过镜像ID导出，镜像名称会丢失。

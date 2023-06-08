@@ -1,4 +1,5 @@
 ---
+title: 05 cherry-pick
 tags: Git
 ---
 

@@ -1,3 +1,7 @@
+---
+tags: Docker
+---
+
 ```shell
 docker run -it -v /host/path:/container/path centos /bin/bash
 ```

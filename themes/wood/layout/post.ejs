@@ -10,6 +10,10 @@
       relate_posts.push(post)
     }
   }
+
+  relate_posts.sort((a, b) => {
+    return a.title > b.title ? 1 : -1
+  })
 %>
 
 <div class="post-container">

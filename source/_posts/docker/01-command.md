@@ -1,6 +1,5 @@
 ---
 tags: Docker
-categories: WEB 前端
 ---
 
 ## 1、docker 简介

@@ -1,0 +1,1 @@
+cp -r /Users/xiong.gao/Desktop/gaollard-blog/docs/pages/ source/_posts
